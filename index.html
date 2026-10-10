@@ -56,6 +56,15 @@ h2{font-size:1.9rem;font-weight:800;letter-spacing:-.01em;margin-bottom:22px}
 .project ul{margin:0 0 16px 20px;color:var(--muted)}
 .contact p{max-width:52ch;margin-bottom:20px;font-size:1.08rem}
 footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);font-size:.9rem}
+.avatar{width:92px;height:92px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;border:4px solid var(--accent);margin-bottom:20px}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:30px}
+.profile div{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.profile span{display:block;font-size:.8rem;color:var(--muted)}
+.profile b{font-size:.98rem;word-break:break-word}
+.bar{height:8px;background:var(--line);border-radius:99px;margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.status{display:inline-block;font-size:.8rem;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--muted);margin-left:8px;vertical-align:middle}
 @media (max-width:560px){nav ul{gap:12px;font-size:.85rem}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -73,6 +82,7 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
   </nav>
 
   <header class="hero">
+    <div class="avatar" aria-hidden="true">SH</div>
     <h1>Saim<br>Hassan</h1>
     <p class="role">BS Artificial Intelligence student who builds software with C++, Python and the web.</p>
     <div class="chips">
@@ -81,6 +91,14 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
     <div class="btns">
       <a class="btn primary" href="#projects">See my projects</a>
       <a class="btn" href="mailto:itzsamukhan786@gmail.com">Email me</a>
+    </div>
+    <div class="profile">
+      <div><span>Name</span><b>Saim Hassan</b></div>
+      <div><span>Program</span><b>BS Artificial Intelligence</b></div>
+      <div><span>Session / Semester</span><b>2025-2029 / 3rd</b></div>
+      <div><span>Roll no.</span><b>BSAIE-25-27</b></div>
+      <div><span>Email</span><b>itzsamukhan786@gmail.com</b></div>
+      <div><span>Focus</span><b>Software, AI and web</b></div>
     </div>
   </header>
 
@@ -98,10 +116,14 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
-      <div class="skill"><h3>C++</h3><p>Programming fundamentals, OOP, file handling.</p></div>
-      <div class="skill"><h3>Python</h3><p>Scripts, problem solving and AI basics.</p></div>
-      <div class="skill"><h3>AI tools</h3><p>Using AI assistants to plan, code and debug faster.</p></div>
-      <div class="skill"><h3>Web development</h3><p>HTML, CSS and JavaScript pages.</p></div>
+      <div class="skill"><h3>C++</h3><p>OOP, file handling, console applications.</p><div class="bar"><i style="width:80%"></i></div></div>
+      <div class="skill"><h3>Python</h3><p>Scripts, problem solving and AI basics.</p><div class="bar"><i style="width:75%"></i></div></div>
+      <div class="skill"><h3>Web development</h3><p>HTML, CSS and JavaScript pages.</p><div class="bar"><i style="width:70%"></i></div></div>
+      <div class="skill"><h3>AI tools</h3><p>Using AI assistants to plan, code and debug faster.</p><div class="bar"><i style="width:75%"></i></div></div>
+      <div class="skill"><h3>Data structures</h3><p>Arrays, linked lists, stacks and queues.</p><div class="bar"><i style="width:65%"></i></div></div>
+      <div class="skill"><h3>Git and GitHub</h3><p>Version control and publishing with GitHub Pages.</p><div class="bar"><i style="width:60%"></i></div></div>
+      <div class="skill"><h3>Problem solving</h3><p>Breaking big tasks into small working steps.</p><div class="bar"><i style="width:80%"></i></div></div>
+      <div class="skill"><h3>Teamwork</h3><p>Clear communication and meeting deadlines.</p><div class="bar"><i style="width:80%"></i></div></div>
     </div>
   </section>
 
@@ -111,22 +133,26 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
       <article class="project">
         <h3>Hospital Management System</h3>
         <p>A system to manage a hospital's daily records in one place.</p>
-        <ul>
-          <li>Patient registration and records</li>
-          <li>Doctor details and appointments</li>
-          <li>Search, update and delete records</li>
-        </ul>
-        <span class="chip">C++</span>
+        <ul><li>Patient registration and records</li><li>Doctor details and appointments</li><li>Search, update and delete records</li></ul>
+        <div class="tags"><span class="chip">C++</span><span class="chip">OOP</span><span class="chip">File handling</span></div>
       </article>
       <article class="project">
         <h3>School Management System</h3>
         <p>A system to handle student and staff information for a school.</p>
-        <ul>
-          <li>Student admission and records</li>
-          <li>Teacher and class details</li>
-          <li>Attendance and results</li>
-        </ul>
-        <span class="chip">C++</span>
+        <ul><li>Student admission and records</li><li>Teacher and class details</li><li>Attendance and results</li></ul>
+        <div class="tags"><span class="chip">C++</span><span class="chip">OOP</span><span class="chip">File handling</span></div>
+      </article>
+      <article class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>This website: a responsive page with light and dark mode, published on GitHub Pages.</p>
+        <ul><li>Works on phone and desktop</li><li>Built with HTML and CSS</li></ul>
+        <div class="tags"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">GitHub Pages</span></div>
+      </article>
+      <article class="project">
+        <h3>Student Result Calculator<span class="status">Practice</span></h3>
+        <p>A small Python program that takes marks, then calculates total, percentage and grade.</p>
+        <ul><li>Input validation</li><li>Grade shown automatically</li></ul>
+        <div class="tags"><span class="chip">Python</span></div>
       </article>
     </div>
   </section>
