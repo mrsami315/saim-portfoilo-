@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saim Hassan | BS AI Student & Web Developer</title>
+<meta name="description" content="Portfolio of Saim Hassan, BS Artificial Intelligence student. C++, Python, AI tools and web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4F9; --ink:#12203A; --muted:#51607A; --line:#C9D3E3;
+  --accent:#0B8F83; --accent-soft:#D9F0EC; --card:#FFFFFF;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0F1726; --ink:#E8EEF8; --muted:#9AA9C2; --line:#27344D; --accent:#3CCDBD; --accent-soft:#12312F; --card:#16213A;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:32px 32px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:var(--paper);opacity:.82;z-index:-1}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:600}
+nav ul{display:flex;gap:20px;list-style:none;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.hero{padding:56px 0 64px}
+.hero h1{font-size:clamp(3rem,13vw,6.4rem);line-height:.95;font-weight:800;letter-spacing:-.03em}
+.hero p.role{margin-top:22px;font-size:1.25rem;color:var(--muted);max-width:34ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{background:var(--accent-soft);color:var(--ink);border:1px solid var(--accent);border-radius:999px;padding:4px 14px;font-size:.9rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{border-color:var(--accent)}
+section{padding:48px 0;border-top:2px solid var(--ink)}
+h2{font-size:1.9rem;font-weight:800;letter-spacing:-.01em;margin-bottom:22px}
+.about p{max-width:62ch;font-size:1.08rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:26px}
+.fact{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:14px 16px}
+.fact span{display:block;font-size:.85rem;color:var(--muted)}
+.fact b{font-size:1.05rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px}
+.skill h3{font-size:1.15rem}
+.skill p{color:var(--muted);font-size:.95rem;margin-top:4px}
+.projects{display:grid;gap:18px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px}
+.project h3{font-size:1.4rem}
+.project p{margin:8px 0 14px;max-width:62ch}
+.project ul{margin:0 0 16px 20px;color:var(--muted)}
+.contact p{max-width:52ch;margin-bottom:20px;font-size:1.08rem}
+footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);font-size:.9rem}
+@media (max-width:560px){nav ul{gap:12px;font-size:.85rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <span>Saim Hassan</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Saim<br>Hassan</h1>
+    <p class="role">BS Artificial Intelligence student who builds software with C++, Python and the web.</p>
+    <div class="chips">
+      <span class="chip">C++</span><span class="chip">Python</span><span class="chip">AI tools</span><span class="chip">Web development</span>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="mailto:itzsamukhan786@gmail.com">Email me</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About me</h2>
+    <p>I am a third-semester BS AI student. I enjoy turning real problems into working programs, from small C++ console tools to web pages. I am learning how AI tools can speed up development, and I want to build systems that people actually use in places like schools and hospitals.</p>
+    <div class="facts">
+      <div class="fact"><span>Program</span><b>BS Artificial Intelligence</b></div>
+      <div class="fact"><span>Semester</span><b>3rd</b></div>
+      <div class="fact"><span>Session</span><b>2025-2029</b></div>
+      <div class="fact"><span>Roll no.</span><b>BSAIE-25-27</b></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>C++</h3><p>Programming fundamentals, OOP, file handling.</p></div>
+      <div class="skill"><h3>Python</h3><p>Scripts, problem solving and AI basics.</p></div>
+      <div class="skill"><h3>AI tools</h3><p>Using AI assistants to plan, code and debug faster.</p></div>
+      <div class="skill"><h3>Web development</h3><p>HTML, CSS and JavaScript pages.</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project">
+        <h3>Hospital Management System</h3>
+        <p>A system to manage a hospital's daily records in one place.</p>
+        <ul>
+          <li>Patient registration and records</li>
+          <li>Doctor details and appointments</li>
+          <li>Search, update and delete records</li>
+        </ul>
+        <span class="chip">C++</span>
+      </article>
+      <article class="project">
+        <h3>School Management System</h3>
+        <p>A system to handle student and staff information for a school.</p>
+        <ul>
+          <li>Student admission and records</li>
+          <li>Teacher and class details</li>
+          <li>Attendance and results</li>
+        </ul>
+        <span class="chip">C++</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Want to work together or just say hello? Send me an email and I will reply as soon as I can.</p>
+    <a class="btn primary" href="mailto:itzsamukhan786@gmail.com">itzsamukhan786@gmail.com</a>
+  </section>
+
+  <footer>
+    Saim Hassan, BS AI, Session 2025-2029, Roll no. BSAIE-25-27
+  </footer>
+</div>
+</body>
+</html>
