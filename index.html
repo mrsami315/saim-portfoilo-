@@ -56,7 +56,8 @@ h2{font-size:1.9rem;font-weight:800;letter-spacing:-.01em;margin-bottom:22px}
 .project ul{margin:0 0 16px 20px;color:var(--muted)}
 .contact p{max-width:52ch;margin-bottom:20px;font-size:1.08rem}
 footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);font-size:.9rem}
-.avatar{width:92px;height:92px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;border:4px solid var(--accent);margin-bottom:20px}
+.avatar{position:relative;overflow:hidden;width:120px;height:120px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;border:4px solid var(--accent);margin-bottom:20px}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:30px}
 .profile div{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
 .profile span{display:block;font-size:.8rem;color:var(--muted)}
@@ -82,7 +83,7 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
   </nav>
 
   <header class="hero">
-    <div class="avatar" aria-hidden="true">SH</div>
+    <div class="avatar">SH<img src="photo.jpg" alt="Saim Hassan" onerror="this.remove()"></div>
     <h1>Saim<br>Hassan</h1>
     <p class="role">BS Artificial Intelligence student who builds software with C++, Python and the web.</p>
     <div class="chips">
@@ -91,6 +92,7 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
     <div class="btns">
       <a class="btn primary" href="#projects">See my projects</a>
       <a class="btn" href="mailto:itzsamukhan786@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/mrsami315" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="profile">
       <div><span>Name</span><b>Saim Hassan</b></div>
@@ -160,7 +162,8 @@ footer{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);fo
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Want to work together or just say hello? Send me an email and I will reply as soon as I can.</p>
-    <a class="btn primary" href="mailto:itzsamukhan786@gmail.com">itzsamukhan786@gmail.com</a>
+    <div class="btns"><a class="btn primary" href="mailto:itzsamukhan786@gmail.com">itzsamukhan786@gmail.com</a>
+    <a class="btn" href="https://github.com/mrsami315" target="_blank" rel="noopener">GitHub</a></div>
   </section>
 
   <footer>
