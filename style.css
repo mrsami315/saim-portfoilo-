@@ -42,3 +42,29 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opac
 @keyframes premiumFloat{0%,100%{translate:0 0}50%{translate:0 -11px}}
 @media(max-width:640px){.floating-note{animation-duration:6s}.profile-card{box-shadow:0 20px 55px rgba(0,0,0,.34)}}
 @media(prefers-reduced-motion:reduce){.floating-note{animation:none!important}.profile-card,.skill-card,.project-card,.journey-card{transition:none!important}}
+
+
+/* Premium visual refinement — 3D glass, ambient lighting and depth */
+:root{--bg:#050914;--surface:rgba(13,23,41,.72);--line:rgba(145,190,255,.18)}
+body:before{background:radial-gradient(ellipse at 16% 14%,rgba(48,111,255,.24),transparent 34%),radial-gradient(ellipse at 83% 27%,rgba(33,220,232,.14),transparent 30%),radial-gradient(ellipse at 50% 100%,rgba(130,85,255,.16),transparent 38%),var(--bg)}
+.site-header{background:rgba(5,9,20,.72);border-bottom-color:rgba(111,173,255,.16);box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.nav-links a{transition:color .2s ease,text-shadow .2s ease}
+.nav-links a:hover{color:#72efff;text-shadow:0 0 18px rgba(57,231,245,.55)}
+.hero{position:relative}
+.hero:before{content:"";position:absolute;inset:7% -5% 3%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 22% 42%,rgba(45,103,235,.13),transparent 45%),radial-gradient(ellipse at 78% 50%,rgba(45,210,232,.08),transparent 42%);filter:blur(20px)}
+.hero h1{text-shadow:0 8px 45px rgba(55,125,255,.16)}
+.eyebrow{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 8px 30px rgba(28,99,220,.09)}
+.profile-card{border-radius:30px;background:linear-gradient(145deg,#4deaff 0%,#527dff 48%,#9b79ff 100%);box-shadow:0 35px 90px rgba(0,0,0,.48),0 0 55px rgba(54,197,255,.2),inset 0 1px 0 rgba(255,255,255,.55)}
+.profile-card .profile-photo{border-radius:24px}
+.orbit-one{border-color:rgba(89,221,255,.33);box-shadow:0 0 35px rgba(57,231,245,.06)}
+.orbit-two{border-color:rgba(153,130,255,.28)}
+.floating-note{border-color:rgba(126,202,255,.25);box-shadow:0 20px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)}
+.section-heading h2,.contact-panel h2{ text-shadow:0 8px 36px rgba(62,125,255,.12)}
+.surface{position:relative;overflow:hidden;border-color:rgba(135,184,255,.17);background:linear-gradient(145deg,rgba(18,32,55,.82),rgba(9,17,32,.76));box-shadow:0 18px 55px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.055)}
+.surface:before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(135deg,rgba(101,210,255,.075),transparent 36%,transparent 72%,rgba(151,124,255,.06))}
+.skill-card:hover,.project-card:hover,.journey-card:hover{border-color:rgba(74,226,255,.5);box-shadow:0 25px 65px rgba(0,0,0,.32),0 0 30px rgba(53,213,242,.1)}
+.skill-icon,.project-icon,.education-mark{background:linear-gradient(145deg,rgba(48,134,255,.24),rgba(128,104,255,.18));border:1px solid rgba(111,203,255,.18)}
+.button-primary{background:linear-gradient(110deg,#2778f5 0%,#586df2 52%,#8a65ed 100%);box-shadow:0 12px 32px rgba(65,117,255,.3),inset 0 1px 0 rgba(255,255,255,.25)}
+.contact-panel{background:radial-gradient(ellipse at 50% 0%,rgba(64,128,255,.23),transparent 62%),linear-gradient(145deg,rgba(18,32,55,.9),rgba(8,15,29,.9));box-shadow:0 28px 85px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.06)}
+.site-footer{background:rgba(4,8,17,.35)}
+@media(max-width:640px){.surface{border-radius:17px}.hero:before{inset:0 -12px}.nav-links{background:rgba(8,15,29,.97);backdrop-filter:blur(20px)}}
