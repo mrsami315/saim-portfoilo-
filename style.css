@@ -18,3 +18,27 @@ body.light{color-scheme:light;--bg:#f3f6fc;--surface:rgba(255,255,255,.84);--sur
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.js-enabled .reveal:not(.is-visible){opacity:1;transform:none}}
 /* GitHub profile photo in the hero card */
 .profile-card .profile-photo{object-fit:cover;object-position:center;border-radius:22px;background:#101c32;display:block;}
+
+
+/* Premium 3D motion layer */
+:root{--neon-a:#39e7f5;--neon-b:#8a78ff;--glass-edge:rgba(154,205,255,.23)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.19;background-image:linear-gradient(rgba(125,174,230,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(125,174,230,.075) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
+.hero{perspective:1200px}
+.hero-copy{transform-style:preserve-3d}
+.hero-visual{perspective:1100px;transform-style:preserve-3d}
+.profile-card{transform-style:preserve-3d;will-change:transform;transition:transform .22s ease,box-shadow .3s ease;box-shadow:0 28px 75px rgba(0,0,0,.42),0 0 35px rgba(57,231,245,.13)}
+.profile-card:before{content:"";position:absolute;inset:-2px;border-radius:30px;padding:2px;background:linear-gradient(135deg,var(--neon-a),transparent 36%,var(--neon-b),transparent 78%,var(--neon-a));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.9}
+.profile-card .profile-photo{transform:translateZ(12px)}
+.profile-card-caption{transform:translateZ(28px);backdrop-filter:blur(16px)}
+.floating-note{animation:premiumFloat 5s ease-in-out infinite;transform:translateZ(55px)}
+.note-bottom{animation-delay:-2.4s}
+.surface{backdrop-filter:blur(16px);box-shadow:0 16px 48px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.035)}
+.skill-card,.project-card,.journey-card{transform-style:preserve-3d;will-change:transform;transition:transform .18s ease,border-color .25s ease,box-shadow .25s ease}
+.skill-card:hover,.project-card:hover,.journey-card:hover{box-shadow:0 24px 55px rgba(0,0,0,.25),0 0 24px rgba(57,231,245,.07)}
+.skill-icon,.project-icon,.education-mark{box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 25px rgba(66,133,255,.12)}
+.button-primary{box-shadow:0 8px 28px rgba(65,117,255,.28),inset 0 1px 0 rgba(255,255,255,.22)}
+.button-primary:hover{box-shadow:0 14px 35px rgba(65,117,255,.4)}
+.section-heading h2{ text-wrap:balance }
+@keyframes premiumFloat{0%,100%{translate:0 0}50%{translate:0 -11px}}
+@media(max-width:640px){.floating-note{animation-duration:6s}.profile-card{box-shadow:0 20px 55px rgba(0,0,0,.34)}}
+@media(prefers-reduced-motion:reduce){.floating-note{animation:none!important}.profile-card,.skill-card,.project-card,.journey-card{transition:none!important}}
