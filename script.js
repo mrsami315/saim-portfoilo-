@@ -17,3 +17,22 @@ const revealItems=document.querySelectorAll(".reveal");
 if("IntersectionObserver"in window&&!reducedMotion){const observer=new IntersectionObserver((entries,obs)=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");obs.unobserve(entry.target)}}),{threshold:.12});revealItems.forEach(item=>observer.observe(item))}else revealItems.forEach(item=>item.classList.add("is-visible"));
 document.getElementById("year").textContent=new Date().getFullYear();
 document.documentElement.classList.add("js-enabled");
+
+// Subtle pointer-driven 3D depth on desktop; automatically disabled for touch/reduced motion.
+const canTilt=window.matchMedia("(hover:hover) and (pointer:fine)").matches&&!reducedMotion;
+if(canTilt){
+  const tiltTargets=document.querySelectorAll(".profile-card,.skill-card,.project-card,.journey-card");
+  tiltTargets.forEach(card=>{
+    card.addEventListener("pointermove",event=>{
+      const rect=card.getBoundingClientRect();
+      const x=(event.clientX-rect.left)/rect.width;
+      const y=(event.clientY-rect.top)/rect.height;
+      const max=card.classList.contains("profile-card")?9:5;
+      const rx=(.5-y)*max, ry=(x-.5)*max;
+      card.style.transform="perspective(900px) rotateX("+rx+"deg) rotateY("+ry+"deg) translateY(-3px)";
+    });
+    card.addEventListener("pointerleave",()=>{
+      card.style.transform=card.classList.contains("profile-card")?"rotate(2deg)":"";
+    });
+  });
+}
